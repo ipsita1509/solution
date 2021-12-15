@@ -1,0 +1,91 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@ipsita1509 
+File could not be created
+Shriyakatamble
+/
+C-_assignment
+Public
+Code
+Issues
+
+   
+Program 1
+The date July 10, 1970 is special because when we write it in the 7/10/70 format, the month times the day equals the year. Write a program that asks the user to enter a month
+( in numeric form ), a day and a two digit year. The program should determine whether the month times the day is equal to the year.
+
+(i) If so, it should display a message saying date is UNIQUE
+(ii) Otherwise it should display a message saying the date is NOT UNIQUE
+
+
+#include <iostream>
+using namespace std;
+int main(){int day, month,year ,unique;
+cout<<"Kindly input your date,month and year , i will tell you if your date is Unique"<<endl;
+cout<<"\n Enter date , month , year that you wish for me to calculate for you "<<endl;
+cin>> day >> month >> year;
+unique = month*day;
+if(month>0 && month<=12 && day>0 && day<=31 && year>=10 && year<=99)
+{
+if (unique == year){
+cout<< "The date is UNIQUE"<<endl;
+}
+else{
+cout<<"The date is NOT UNIQUE"<<endl;
+}
+}
+else{
+cout << "Enter valid month date and year "<<endl;
+}
+return 0;
+}
+
+
+Problem: 2
+
+Write a C++ program in which user enter their CET and PUC marks and your program will help student in selection of University. Based on these marks student will be allocated a 
+seat at different department of different University.University Name and Department CriteriaVTU UniversityIT:above 80% in CET and 70% in PUCComputer Science Eng : above 70% in
+CET and 60% in PUCElectronics & comm : above 70% in CET and 50% in PUCManipal UniversityIT: 70%-60% in CET and 50% in PUCCivil Engg :59%-50% in CET and 50% in PUCMechanical 
+Engg: Above 40% and below 50% in CET and 50% in PUC
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int cet;
+int puc;
+cout<<"please enter your cet marks "<<endl;
+cin>>cet;
+cout<<"please enter your puc marks "<<endl;
+cin>>puc;
+if(cet>=80 && puc>=70 )
+{
+cout<<"you have got admission in VTU university IT branch"<<endl;
+}
+else if(cet>=70 && puc>=60 && puc<70)
+{
+cout<<"you have got admission in VTU Universty Computer science branch "<<endl;
+}
+else if(cet>=70 && puc>=50 && puc<60)
+{
+cout<<"you have got admission in VTU university Electronics and comm branch "<<endl;
+}
+if(cet<=70 && cet>=60 && puc>=50 )
+{
+cout<<"you have got admission in Manipal University IT branch"<<endl;
+}
+else if(cet<=59 && cet>=50 && puc>=50)
+{
+cout<<"you have got admission in Manipal University Civil engineering branch "<<endl;
+}
+else if(cet>=40 && cet<=50 && puc>=50)
+{
+cout<<"you have got admission in Manipal University Mechanical enginnering branch "<<endl;
+}
+}
+
