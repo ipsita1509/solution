@@ -1,0 +1,103 @@
+
+   
+PROBLEM: 1
+
+Given a maximum of 100 digit numbers as input, find the difference between the sum of odd and even position digits.
+Input 1:
+4567
+Expected output: 
+2
+Explanation:
+The Sum of odd position digits 4 and 6 is 10. The Sum of even position digits 5 and 7 is 12. The difference is 12-10=2.
+Input #2: 
+9834698765123
+
+Solution :
+
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+int a = 0,b = 0,i = 0, n;
+char num[100];
+cin>> num;
+n = strlen(num);
+while(n>0)
+{
+if(i==0)
+{
+a+=num[n-1]-48;
+n--;
+i=1;
+}
+else
+{
+b+=num[n-1]-48;
+n--;
+i=0;
+}
+}
+cout<< abs(a-b);
+return 0;
+}
+
+
+PROBLEM: 2
+
+C++ program to make simple calculator by using only if statement
+
+Solution :
+
+#include <iostream>
+using namespace std;
+int main(){
+int a;
+int b;
+char mul;
+char sub;
+char dvd;
+char add;
+int value;
+int sum;
+cout<<"press 1 for mul ,2 for sub ,3 for dvd ,4 for add"<<endl;
+cout<<"enter value"<<endl;
+cin>>value;
+if(value==1)
+{
+cout<<"enter value 1"<<endl;
+cin>>a;
+cout<<"enter value 1"<<endl;
+cin>>b;
+sum=a*b;
+cout<<sum<<endl;
+}
+if(value==2)
+{
+cout<<"enter value 1"<<endl;
+cin>>a;
+cout<<"enter value 1"<<endl;
+cin>>b;
+sum=a-b;
+cout<<sum<<endl;
+}
+if(value==3)
+{
+cout<<"enter value 1"<<endl;
+cin>>a;
+cout<<"enter value 1"<<endl;
+cin>>b;
+sum=a/b;
+cout<<sum<<endl;
+}
+if(value==4)
+{
+cout<<"enter value 1"<<endl;
+cin>>a;
+cout<<"enter value 1"<<endl;
+cin>>b;
+sum=a+b;
+cout<<sum<<endl; }
+}
+
