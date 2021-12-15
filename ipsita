@@ -1,0 +1,152 @@
+
+   
+Problem:1
+
+*Write a C++ program that will display if a students is pass or not in his exam.
+(50% or more is pass). If the student is Pass than your program should display
+which letter the student has obtained.
+?? 85% or more E for excellent
+?? 75% or more but less than 85% O for Outstanding
+?? 65% or more but less than 75% G for good
+?? Less than 65% S for satisfactory
+If however the student is Fail (below 50% marks) your program should display 1
+whether the student should Resit or Redo depending on the following criteria.
+?? 33% or more Resit in exam
+?? Less than 33% Redo course
+
+Solution
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+int marks;
+
+cout<<"enter marks "<<endl;
+
+cin>>marks;
+
+if(marks>=85)
+
+{
+
+cout<<"outstanding work "<<endl;
+
+}
+
+if(marks>=75 && marks<85)
+
+{
+
+cout<<"exellent work "<<endl;
+
+}
+
+if(marks>=65 && marks<75)
+
+{
+
+cout<<"average show "<<endl;
+
+}
+
+if(marks<=65 && marks>50)
+
+{
+
+cout<<"just/........ "<<endl;
+
+}
+
+if(marks<50 )
+{
+
+cout<<"bad show "<<endl;
+
+if(marks<50 && (marks >=33))
+
+{
+
+cout<<"you can resit "<<endl;
+
+}
+
+else if(marks<33)
+
+{
+
+cout<<"redo please"<<endl;
+
+}
+
+}
+
+}
+
+Problem :2
+Problem Statement – An automobile company manufactures both a two wheeler (TW) and a four wheeler (FW). A company manager wants to make the production of both types of vehicle
+according to the given data below:
+
+1st data, Total number of vehicle (two-wheeler + four-wheeler)=v
+2nd data, Total number of wheels = W
+The task is to find how many two-wheelers as well as four-wheelers need to manufacture as per the given data.
+
+Example :
+Input :
+200 -> Value of V
+540 -> Value of W
+Output :
+TW =130 FW=70
+
+Explanation:
+130+70 = 200 vehicles
+(70*4)+(130*2)= 540 wheels
+
+Constraints :
+2<=W
+
+W%2=0
+
+V<W
+
+Print “INVALID INPUT” , if inputs did not meet the constraints.
+
+The input format for testing
+
+The candidate has to write the code to accept two positive numbers separated by a new line.
+
+
+First Input line – Accept value of V.
+
+Second Input line- Accept value for W.
+
+The output format for testing
+Written program code should generate two outputs, each separated by a single space character(see the example)
+Additional messages in the output will result in the failure of test case
+
+Solution
+
+#include <bits/stdc++.h>
+using namespace std;
+int main () 
+{
+  int v, w;
+  cin >> v >> w;
+  float x = ((4 * v) - w) / 2;
+  if ((w & 1) || w < 2 || w <= v)
+    {
+      cout << "INVALID INPUT";
+      return 0;
+    }
+  cout << "TW=" << x << " " << "FW=" << v - x;
+
+}
+
+
+
+
+
